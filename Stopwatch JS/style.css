@@ -1,0 +1,120 @@
+:root
+{
+	--red-light: #FF0000;
+	--red: #B30000;
+	--yellow-light: #FFFF00;
+	--yellow: #B2B300;
+	--green-light: #00FF00; 
+	--green: #00B300;
+	--black: #1A1A1A;
+}
+
+*
+{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-size: 32px;
+	font-family: arial;
+	color: white;
+}
+
+body
+{
+	background-color: var(--black);
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+}
+
+.container
+{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+h1
+{
+	padding-left: 10px;
+	letter-spacing: 10px;
+}
+
+.stopwatch
+{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+span
+{
+	margin: 0 5px 0 5px;
+	font-size: 2rem;
+}
+
+.buttons
+{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+button
+{
+	border: none;
+	border-radius: 5%;
+	padding: 0.25rem;
+}
+
+#button-start
+{
+	cursor: pointer;
+	background-color: var(--green);
+}
+
+#button-stop
+{
+	cursor: pointer;
+	background-color: var(--red);
+}
+
+#button-reset
+{
+	cursor: pointer;
+	background-color: var(--yellow);
+}
+
+#button-start:hover
+{
+	background-color: var(--green-light);
+}
+
+#button-stop:hover
+{
+	background-color: var(--red-light);
+}
+
+#button-reset:hover
+{
+	background-color: var(--yellow-light);
+}
+
+@media only screen and (min-width: 768px)
+{
+	.container
+	{
+		width: 45vw;
+	}
+}
+
+@media only screen and (min-width: 1024px)
+{
+	.container
+	{
+		width: 25vw;
+	}
+}	
